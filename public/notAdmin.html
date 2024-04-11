@@ -1,0 +1,38 @@
+<html>
+<head>
+  <title>Forms</title>
+
+  <link rel="stylesheet" href="/stylesheets/style.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
+  <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin="anonymous"></script>
+  
+</head>
+
+<body>
+  <h2> Assignments for <span id="whoami"></span></h2>
+  <div id= "message"></div>
+  <div id="assignments">
+    <!-- This element's contents will be replaced with your component. -->
+  </div>
+
+  <br><a href="/exam/changePassword">Change Password</a><br>
+  <a href="/exam/logout">Log out</a><br>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('message');
+    if (message) {
+      document.getElementById('message').innerHTML = name;
+    }
+  </script>
+
+  <!-- Load our React component. -->
+  <script src="/javascripts/whoami.js" type="text/babel"></script>
+  <script src="/javascripts/notAdmin.js" type="text/babel"></script>
+</body>
+</html>

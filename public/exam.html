@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>Express</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">  
+</head>
+
+<body>
+  <div id="message"></div>
+  <h2>Please log into the Assignment Checker</h2>
+  <form method="post" action="/exam">
+    <input type="text" name="username" placeholder="User name"><br>
+    <input type="password" name="password" placeholder="Password"><br>
+    <input type="submit" value="Log in">
+  </form> 
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('message');
+    if (message) {
+      document.getElementById('message').innerHTML = name;
+    }
+  </script>
+</body>
+</html>

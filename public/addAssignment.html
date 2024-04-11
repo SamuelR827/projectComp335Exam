@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>Express</title>
+  <link rel="stylesheet" href="/stylesheets/style.css"> 
+</head>
+
+<body> 
+  <div id= "message"></div>
+  <h2>Please add a new assignment</h2>
+  
+  <form method="post" action="/exam/addAssignment">
+  <div style = "float:left; width: 200px;">Student Username </div>
+    <input type="text" name="username" placeholder="username"><br>
+  <div style = "float:left; width: 200px;">Due date </div>
+    <input type="text" name="due" placeholder="due date (2024-04-16)"><br>
+  <div style = "float:left; width: 200px;">Assignment Description </div>
+    <textarea name="description" placeholder="assignment description"></textarea><br>
+  <br><div style = "float:left; width: 200px;">&nbsp;</div>
+    <input type="submit" value="Submit the assignment">
+  </form>
+
+  <br> <a href="/exam/admin">Back to Main Administrative Page</a><br>
+
+
+</body>
+</html>
