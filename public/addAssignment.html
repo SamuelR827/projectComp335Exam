@@ -20,7 +20,12 @@
   </form>
 
   <br> <a href="/exam/admin">Back to Main Administrative Page</a><br>
-
-
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('message');
+    if (message) {
+      document.getElementById('message').innerHTML = name;
+    }
+  </script>
 </body>
 </html>
